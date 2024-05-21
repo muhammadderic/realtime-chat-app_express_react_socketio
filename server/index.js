@@ -3,7 +3,7 @@ const { createServer } = require("http");
 const { Server } = require("socket.io");
 const cors = require("cors");
 
-const { addUser, getUser } = require("./controllers/userController");
+const { addUser, getUser, removeUser, getUsersInRoom } = require("./controllers/userController");
 
 const app = express();
 const httpServer = createServer(app);
@@ -46,7 +46,12 @@ io.on("connection", (socket) => {
 
   // Handle any disconnect events
   socket.on("disconnect", () => {
-    console.log("A user has left");
+    const user = removeUser(socket.id);
+
+    if (user) {
+      io.to(user.room).emit("message", { user: "admin", text: `${user.name} has left` });
+      io.to(user.room).emit("roomData", { room: user.room, users: getUsersInRoom(user.room) })
+    }
   })
 })
 

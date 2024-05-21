@@ -13,8 +13,6 @@
 .message-box {
   max-width: 80%;
   padding: .7rem .8rem;
-  background-color: #074173;
-  color: #fff;
   border-radius: .5rem;
 }
 
@@ -37,4 +35,20 @@
 
 .justify-start {
   justify-content: flex-start;
+}
+
+.background-dark {
+  background-color: #074173;
+}
+
+.background-light {
+  background-color: #e2e1e1;
+}
+
+.text-dark {
+  color: #074173;
+}
+
+.text-light {
+  color: #F3F3F3;
 }
