@@ -9,24 +9,31 @@ let socket;
 const Chat = () => {
   const [name, setName] = useState("");
   const [room, setRoom] = useState("");
+  const [messages, setMessages] = useState([]);
   const location = useLocation();
   const navigate = useNavigate();
 
   useEffect(() => {
     const { name, room } = queryString.parse(location.search);
 
-    // socket = io(ENDPOINT);
+    socket = io(ENDPOINT);
 
     setName(name);
     setRoom(room);
 
-    // socket.emit("join", {name, room}, (error) => {
-    //   if(error) {
-    //     navigate("/");
-    //     alert("Error");
-    //   }
-    // })
+    socket.emit("join", { name, room }, (error) => {
+      if (error) {
+        navigate("/");
+        alert("Error");
+      }
+    })
   }, [location.search, navigate])
+
+  useEffect(() => {
+    socket.on("message", message => {
+      setMessages([...messages, message]);
+    })
+  }, [])
 
   return (
     <div className="chat-outer-container">

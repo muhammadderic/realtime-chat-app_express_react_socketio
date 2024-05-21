@@ -3,11 +3,13 @@ const { createServer } = require("http");
 const { Server } = require("socket.io");
 const cors = require("cors");
 
+const { addUser } = require("./controllers/userController");
+
 const app = express();
 const httpServer = createServer(app);
 const io = new Server(httpServer, {
   cors: {
-    origin: "localhost:3000",
+    origin: "http://localhost:3000",
   }
 })
 
@@ -22,7 +24,14 @@ app.use("/", (req, res) => {
 // SocketIO connection
 io.on("connection", (socket) => {
   socket.on("join", ({ name, room }, callback) => {
-    console.log("You are join!");
+    const { error, user } = addUser({ id: socket.id, name, room });
+
+    if (error) return callback(error);
+
+    socket.join(user.room);
+
+    socket.emit("message", { user: "admin", text: `${user.name}, welcome to the room ${user.room}` });
+    socket.broadcast.to(user.room).emit("message", { user: "admin", text: `${user.name} has joined!` });
 
     callback();
   })
