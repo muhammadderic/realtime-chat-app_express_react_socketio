@@ -1,0 +1,33 @@
+.infobar {
+  height: 4rem;
+  width: 100%;
+  padding: .5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: #074173;
+  border-radius: 0 0 .3rem .3rem;
+}
+
+.infobar-left-container {
+  display: flex;
+  align-items: center;
+  gap: .3rem;
+  color: #fff;
+}
+
+.icon-online {
+  width: .7rem;
+}
+
+.infobar-room {
+  font-size: 1rem;
+}
+
+.infobar-right-container {
+  display: flex;
+  align-items: center;
+}
+
+.icon-close {
+  color: #fff;
+}

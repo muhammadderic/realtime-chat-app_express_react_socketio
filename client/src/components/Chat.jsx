@@ -3,6 +3,10 @@ import { useLocation, useNavigate } from "react-router-dom";
 import queryString from "query-string";
 import io from "socket.io-client";
 
+import InfoBar from "./InfoBar";
+import Input from "./Input";
+import "../styles/chat.css";
+
 const ENDPOINT = "localhost:5000";
 let socket;
 
@@ -33,12 +37,14 @@ const Chat = () => {
     socket.on("message", message => {
       setMessages([...messages, message]);
     })
-  }, [])
+  }, [messages])
 
   return (
     <div className="chat-outer-container">
       <div className="chat-inner-container">
+        <InfoBar room={room} />
         <h1>Chat</h1>
+        <Input />
       </div>
     </div>
   );
