@@ -1,0 +1,46 @@
+.activeusers-container {
+  width: 40%;
+  height: 100%;
+  padding: 2rem .5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #2b2b2b;
+  color: #fff;
+}
+
+.active-users-title {
+  margin: 0;
+  margin-bottom: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid #fff;
+}
+
+.active-user-box {
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.active-user-name {
+  margin: 0;
+  font-size: .8rem;
+}
+
+.app-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.app-details-title {
+  margin: 0;
+  margin-bottom: .5rem;
+  font-size: .8rem;
+}
+
+.app-details-text {
+  margin: 0;
+  font-size: .5rem;
+}

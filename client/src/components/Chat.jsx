@@ -6,6 +6,7 @@ import io from "socket.io-client";
 import InfoBar from "./InfoBar";
 import Messages from "./Messages";
 import Input from "./Input";
+import ActiveUsers from "./ActiveUsers";
 import "../styles/chat.css";
 
 const ENDPOINT = "localhost:5000";
@@ -54,8 +55,6 @@ const Chat = () => {
     }
   }
 
-  console.log(users);
-
   return (
     <div className="chat-outer-container">
       <div className="chat-inner-container">
@@ -68,6 +67,7 @@ const Chat = () => {
           setMessage={setMessage}
           sendMessage={sendMessage} />
       </div>
+      <ActiveUsers users={users} />
     </div>
   );
 }
