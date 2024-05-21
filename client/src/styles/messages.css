@@ -6,3 +6,10 @@
 .message-outer-container {
   padding: .3rem;
 }
+
+/* Styles for larger screens */
+@media only screen and (min-width: 1200px) {
+  .messages-container {
+    padding: 2rem .5rem;
+  }
+}

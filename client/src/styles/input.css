@@ -29,3 +29,36 @@
 .sendButton:hover {
   background-color: #2876ba;
 }
+
+/* Styles for tablets */
+@media only screen and (min-width: 768px) {
+  .input {
+    padding: 1.2rem;
+    font-size: 1em;
+  }
+}
+
+/* Styles for desktops */
+@media only screen and (min-width: 992px) {
+  .input {
+    width: 85%;
+    padding: 1.5rem;
+    font-size: 1.2em;
+  }
+
+  .sendButton {
+    width: 15%;
+  }
+}
+
+/* Styles for larger screens */
+@media only screen and (min-width: 1200px) {
+  .input {
+    padding: 1.5rem;
+    font-size: 1.5rem;
+  }
+
+  .sendButton {
+    font-size: 1.3rem;
+  }
+}

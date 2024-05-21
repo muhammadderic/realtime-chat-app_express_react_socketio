@@ -2,7 +2,7 @@
   width: 40%;
   height: 100%;
   padding: 2rem .5rem;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-between;
   background-color: #2b2b2b;
@@ -43,4 +43,46 @@
 .app-details-text {
   margin: 0;
   font-size: .5rem;
+}
+
+/* Styles for tablets */
+@media only screen and (min-width: 768px) {
+  .activeusers-container {
+    display: flex;
+  }
+}
+
+/* Styles for desktops */
+@media only screen and (min-width: 992px) {
+  .active-user-name {
+    font-size: 1rem;
+  }
+
+  .app-details-title {
+    font-size: 1rem;
+  }
+
+  .app-details-text {
+    font-size: .8rem;
+  }
+}
+
+/* Styles for larger screens */
+@media only screen and (min-width: 1200px) {
+  .activeusers-container {
+    padding: 4rem 2rem;
+  }
+
+  .active-users-title {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+  }
+
+  .active-user-name {
+    font-size: 1.3rem;
+  }
+
+  .app-details-title {
+    font-size: 1.5rem;
+  }
 }

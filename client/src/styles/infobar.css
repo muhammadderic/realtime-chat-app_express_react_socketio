@@ -33,3 +33,27 @@
 .icon-close {
   color: #fff;
 }
+
+/* Styles for desktops */
+@media only screen and (min-width: 992px) {
+  .infobar {
+    height: 5rem;
+    padding: .7rem 1.5rem;
+  }
+
+  .left-inner-container h3 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Styles for larger screens */
+@media only screen and (min-width: 1200px) {
+  .infobar {
+    height: 6rem;
+    padding: .7rem 2rem;
+  }
+
+  .infobar-room {
+    font-size: 1.5rem;
+  }
+}
