@@ -3,7 +3,7 @@ const { createServer } = require("http");
 const { Server } = require("socket.io");
 const cors = require("cors");
 
-const { addUser } = require("./controllers/userController");
+const { addUser, getUser } = require("./controllers/userController");
 
 const app = express();
 const httpServer = createServer(app);
@@ -32,6 +32,14 @@ io.on("connection", (socket) => {
 
     socket.emit("message", { user: "admin", text: `${user.name}, welcome to the room ${user.room}` });
     socket.broadcast.to(user.room).emit("message", { user: "admin", text: `${user.name} has joined!` });
+
+    callback();
+  })
+
+  socket.on("sendMessage", (message, callback) => {
+    const user = getUser(socket.id);
+
+    io.to(user.room).emit("message", { user: user.name, text: message });
 
     callback();
   })

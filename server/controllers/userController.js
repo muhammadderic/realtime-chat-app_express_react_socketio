@@ -21,4 +21,6 @@ const addUser = ({ id, name, room }) => {
   return { user };
 }
 
-module.exports = { addUser };
+const getUser = (id) => users.find(user => user.id === id);
+
+module.exports = { addUser, getUser };

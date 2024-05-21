@@ -13,6 +13,7 @@ let socket;
 const Chat = () => {
   const [name, setName] = useState("");
   const [room, setRoom] = useState("");
+  const [message, setMessage] = useState("");
   const [messages, setMessages] = useState([]);
   const location = useLocation();
   const navigate = useNavigate();
@@ -39,12 +40,23 @@ const Chat = () => {
     })
   }, [messages])
 
+  const sendMessage = (event) => {
+    event.preventDefault();
+
+    if (message) {
+      socket.emit("sendMessage", message, () => setMessage(""));
+    }
+  }
+
   return (
     <div className="chat-outer-container">
       <div className="chat-inner-container">
         <InfoBar room={room} />
         <h1>Chat</h1>
-        <Input />
+        <Input
+          message={message}
+          setMessage={setMessage}
+          sendMessage={sendMessage} />
       </div>
     </div>
   );
