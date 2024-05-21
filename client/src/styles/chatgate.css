@@ -1,0 +1,82 @@
+.chatgate-outer-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1A1A1D;
+}
+
+.chatgate-inner-container {
+  width: 60%;
+  text-align: center;
+}
+
+.chatgate-title {
+  width: 70%;
+  margin: 1rem auto;
+  padding-bottom: .5rem;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+
+.chatgate-input {
+  width: 100%;
+  margin: .3rem 0;
+  padding: .8rem;
+  border: none;
+  border-radius: .3rem;
+}
+
+.chatgate-input:focus {
+  outline: none;
+}
+
+.button {
+  width: 100%;
+  margin-top: 1rem;
+  padding: .8rem;
+  background-color: #074173;
+  color: #fff;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  border-radius: .3rem;
+}
+
+.button:hover {
+  background-color: #2876ba;
+}
+
+/* Styles for tables */
+@media only screen and (min-width: 768px) {
+  .chatgate-inner-container {
+    width: 40%;
+  }
+
+  .chatgate-title {
+    margin-bottom: 2rem;
+  }
+}
+
+/* Styles for laptops */
+@media only screen and (min-width: 992px) {
+  .chatgate-inner-container {
+    width: 30%;
+  }
+
+  .chatgate-input {
+    margin: .5rem 0;
+    padding: 1rem;
+  }
+
+  .button {
+    padding: 1rem;
+  }
+}
+
+/* Styles for larger screens */
+@media only screen and (min-width: 1200px) {
+  .chatgate-inner-container {
+    width: 20%;
+  }
+}
