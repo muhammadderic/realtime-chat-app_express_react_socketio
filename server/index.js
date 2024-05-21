@@ -21,7 +21,11 @@ app.use("/", (req, res) => {
 
 // SocketIO connection
 io.on("connection", (socket) => {
-  console.log("A user has connected");
+  socket.on("join", ({ name, room }, callback) => {
+    console.log("You are join!");
+
+    callback();
+  })
 
   // Handle any disconnect events
   socket.on("disconnect", () => {
