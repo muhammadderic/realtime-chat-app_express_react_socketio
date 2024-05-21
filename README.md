@@ -1,6 +1,6 @@
 <a name="readme-top"></a>
 
-[![LinkedIn]][linkedin-url]
+[MyLinkedIn][linkedin-url]
 
 <br />
 <div align="center">
@@ -35,8 +35,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
 Chat applications basically allow two-way communication, both individual to individual, individual to group, or group to group. This application enables the full basic functionality of a chat application, namely that users can enter certain rooms and communicate with users in that room, but users will not know about conversations between users in other rooms.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -46,10 +44,10 @@ Chat applications basically allow two-way communication, both individual to indi
 
 This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
-* [![React]][React-url]
-* [![Express]][Express-url]
-* [![Socket.io]][socket-io-url]
-* [![query string]][query-string]
+* [React][React-url]
+* [Express][Express-url]
+* [Socket.io][socket-io-url]
+* [query string][query-string]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
