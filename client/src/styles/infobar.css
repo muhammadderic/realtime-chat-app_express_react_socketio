@@ -4,6 +4,8 @@
   padding: .5rem 1rem;
   display: flex;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
   background-color: #074173;
   border-radius: 0 0 .3rem .3rem;
 }

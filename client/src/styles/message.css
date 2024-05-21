@@ -1,0 +1,40 @@
+.message-inner-container {
+  padding: .3rem;
+  display: flex;
+  align-items: center;
+}
+
+.message-sender-name {
+  color: #828282;
+  font-family: Helvetica;
+  font-size: .7rem;
+}
+
+.message-box {
+  max-width: 80%;
+  padding: .7rem .8rem;
+  background-color: #074173;
+  color: #fff;
+  border-radius: .5rem;
+}
+
+.message-text {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.mr-c5r {
+  margin: 0 .5rem 0 0;
+}
+
+.ml-c5r {
+  margin: 0 0 0 .5rem;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}

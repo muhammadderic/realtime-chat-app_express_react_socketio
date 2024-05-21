@@ -4,6 +4,7 @@ import queryString from "query-string";
 import io from "socket.io-client";
 
 import InfoBar from "./InfoBar";
+import Messages from "./Messages";
 import Input from "./Input";
 import "../styles/chat.css";
 
@@ -52,7 +53,9 @@ const Chat = () => {
     <div className="chat-outer-container">
       <div className="chat-inner-container">
         <InfoBar room={room} />
-        <h1>Chat</h1>
+        <Messages
+          messages={messages}
+          name={name} />
         <Input
           message={message}
           setMessage={setMessage}

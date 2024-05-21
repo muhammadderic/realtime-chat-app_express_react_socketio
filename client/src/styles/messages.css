@@ -1,0 +1,8 @@
+.messages-container {
+  height: 100%;
+  padding: 1rem .5rem;
+}
+
+.message-outer-container {
+  padding: .3rem;
+}
